@@ -1,24 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TacoPop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="HeaderView" customModule="TacoPop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmj-g3-ArJ" customClass="HeaderView" customModule="TacoPop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taco-POP" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-iH-tS0">
+                                        <rect key="frame" x="75" y="35" width="225" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="42s-AV-Cdc"/>
+                                            <constraint firstAttribute="width" constant="225" id="lQ6-gM-xCt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81776230569948183" green="0.16727837066502094" blue="0.11438167647803281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="0qy-iH-tS0" firstAttribute="centerX" secondItem="Kmj-g3-ArJ" secondAttribute="centerX" id="32H-f3-h2h"/>
+                                    <constraint firstItem="0qy-iH-tS0" firstAttribute="centerY" secondItem="Kmj-g3-ArJ" secondAttribute="centerY" id="Dd8-eG-W4v"/>
+                                    <constraint firstAttribute="height" constant="120" id="v4S-HC-B6s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kmj-g3-ArJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AH9-Q1-CAa"/>
+                            <constraint firstItem="Kmj-g3-ArJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HJO-40-4zC"/>
+                            <constraint firstItem="Kmj-g3-ArJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WIM-l2-gwn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="headerView" destination="Kmj-g3-ArJ" id="jZP-zd-svi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Taco-POP" width="490" height="100"/>
+    </resources>
 </document>
