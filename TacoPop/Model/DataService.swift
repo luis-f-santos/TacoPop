@@ -18,7 +18,7 @@ class DataService {
     
     weak var delegate: DataServiceDelegate?
     
-    var tacoArray: Array<Tacto> = []
+    var tacoArray: Array<Taco> = []
     
     func loadDeliciousTacoData () {
         
