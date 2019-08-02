@@ -15,10 +15,10 @@ enum TacoShell: Int {
 }
 
 enum TacoProtein: String {
-    case beef = "Beef"
-    case chicken = "Chicken"
-    case brisket = "Brisket"
-    case fish = "Fish"
+    case Beef = "Beef"
+    case Chicken = "Chicken"
+    case Brisket = "Brisket"
+    case Fish = "Fish"
     
 }
 
@@ -73,13 +73,13 @@ struct Taco {
         
         switch proteinId {
         case 2:
-            self._proteinId = TacoProtein.chicken
+            self._proteinId = TacoProtein.Chicken
         case 3:
-            self._proteinId = TacoProtein.brisket
+            self._proteinId = TacoProtein.Brisket
         case 4:
-            self._proteinId = TacoProtein.fish
+            self._proteinId = TacoProtein.Fish
         default:
-            self._proteinId = TacoProtein.beef
+            self._proteinId = TacoProtein.Beef
         }
         
         switch condimentId {
